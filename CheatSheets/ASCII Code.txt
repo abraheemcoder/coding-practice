@@ -1,0 +1,72 @@
+🔢 Numbers (0–9)
+
+Character	ASCII
+ 0	         48
+ 1	         49
+ 2	         50
+ 3	         51
+ 4	         52
+ 5	         53
+ 6	         54
+ 7	         55
+ 8	         56
+ 9	         57
+
+🔠 Uppercase Letters (A–Z)
+
+Character	ASCII	Character	ASCII
+ A	         65	     N	         78
+ B	         66	     O	         79
+ C	         67	     P	         80
+ D	         68	     Q	         81
+ E	         69	     R	         82
+ F	         70	     S	         83
+ G	         71	     T	         84
+ H	         72	     U	         85
+ I	         73	     V	         86
+ J	         74	     W	         87
+ K	         75	     X	         88
+ L	         76	     Y	         89
+ M	         77	     Z	         90
+
+🔡 Lowercase Letters (a–z)
+
+Character	ASCII	Character	ASCII
+ a	         97	     n	         110
+ b	         98	     o	         111
+ c	         99	     p	         112
+ d	         100     q	         113
+ e	         101     r	         114
+ f	         102     s	         115
+ g	         103     t	         116
+ h	         104     u	         117
+ i	         105     v	         118
+ j	         106     w	         119
+ k	         107     x	         120
+ l	         108     y	         121
+ m	         109     z	         122
+
+⭐ Important Symbols
+
+Symbol	     ASCII
+ Space	      32
+ !	          33
+ "	          34
+ #	          35
+ $	          36
+ %	          37
+ &	          38
+ (	          40
+ )	          41
+ +	          43
+ ,	          44
+ -	          45
+ .	          46
+ /	          47
+ :	          58
+ ;	          59
+ <	          60
+ =	          61
+ >	          62
+ ?	          63
+ @	          64

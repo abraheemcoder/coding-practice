@@ -1,0 +1,98 @@
+JavaScript Operators Cheat Sheet
+
+1️⃣ Arithmetic Operators
+    Used for math calculations.
+
+Operator	Example	   Result
+ +	         5 + 3	    8
+ -	         5 - 3	    2
+ *	         5 * 3	    15
+ /	         6 / 3	    2
+ %	         5 % 3	    2 (remainder)
+ **	         2 ** 3	    8 (power)
+ ++	         x++	    increment by 1
+ --	         x--	    decrement by 1
+
+2️⃣ Assignment Operators
+    Used to assign values to variables.
+
+Operator    Example     Meaning
+ =	         x = 5	     assign 5 to x
+ +=	         x += 3	     x = x + 3
+ -=	         x -= 3	     x = x - 3
+ *=	         x *= 3	     x = x * 3
+ /=	         x /= 3	     x = x / 3
+ %=	         x %= 3	     x = x % 3
+ **=         x **= 2	 x = x ** 2
+
+3️⃣ Comparison Operators
+    Used to compare values.
+
+Operator    Example	    Meaning
+ ==	         5 == '5'	 equal (value only)
+ ===         5 === '5'	 strict equal (value + type)
+ !=	         5 != '6'	 not equal
+ !==         5 !== '5'	 strict not equal
+ >	         5 > 3       greater than
+ <	         5 < 3	     less than
+ >=	         5 >= 5	     greater or equal
+ <=	         5 <= 5	     less or equal
+
+4️⃣ Logical Operators
+    Used for multiple conditions.
+
+Operator    Example 	        Meaning
+ &&	         true && false	     AND → true if both true
+ !	         !true	             NOT → reverses boolean
+
+5️⃣ String Operators
+
+Operator	Example	                Result
++	         "Hello " + "World"	     "Hello World"
++=	         str += "!"	             append "!" to str
+
+6️⃣ Conditional (Ternary) Operator                            Need practice
+
+var result = (condition) ? "True" : "False";
+
+Example:
+var age = 20;
+var canVote = (age >= 18) ? "Yes" : "No"; // Yes
+
+7️⃣ Type Operators                                            Need practice
+
+Operator	   Example	               Meaning
+ typeof	        typeof 5	            "number"
+ instanceof     obj instanceof Array    true/false
+
+8️⃣ Bitwise Operators                                         Need practice
+    Operate on binary numbers.
+
+Operator	Example	    Meaning
+ &	         5 & 1	     AND
+ `	         `	         `5
+ ^	         5 ^ 1	     XOR
+ ~	         ~5	         NOT
+ <<	         5 << 1	     left shift
+ >>	         5 >> 1	     right shift
+ >>>	     5 >>> 1	 zero-fill right shift
+
+9️⃣ Comma Operator                                            Need practice
+
+var a = (1, 2, 3); // a = 3
+
+Evaluates all expressions, returns last value.
+
+🔟 Unary Operators
+
+Operator	Example	    Meaning
++	         +"5"	     convert string to number
+-	         -"5"	     convert string to negative number
+++	         x++	     increment by 1
+--	         x--	     decrement by 1
+!	         !true	     boolean NOT
+
+1️⃣1️⃣ Optional Chaining Operator ?. (ES2020)                  Need practice
+
+var obj = {};
+console.log(obj?.name); // undefined, doesn't throw error
