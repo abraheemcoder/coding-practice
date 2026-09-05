@@ -107,66 +107,111 @@ const q4Output = document.createElement("p");
 q4Output.append(q4Data);
 document.body.append(q4Output);
 
-// ===================================
+// // ===================================
 
-// Q5
-// Write a script to display multiplication table of any number in your browser.
-// e.g: "Table of 4
-//       4x1=4
-//       4x2=8
-//       4x3=12
-//       4x4=16
-//       4x5=20
-//       4x6=24
-//       4x7=28
-//       4x8=32
-//       4x9=36
-//       4x10=40"
-let userNum = prompt("Enter a number to generate table");
-const inputHandler = (tableNum) => {
-  if (tableNum === null || tableNum.trim() === "") {
-    alert("Please enter a valid number");
-  } else if (isNaN(tableNum)) {
-    alert("Please enter a valid number\ninput must be a number");
-  } else {
-    const tableTitle = `Table of ${tableNum}`;
-    let table = "";
+// // Q5
+// // Write a script to display multiplication table of any number in your browser.
+// // e.g: "Table of 4
+// //       4x1=4
+// //       4x2=8
+// //       4x3=12
+// //       4x4=16
+// //       4x5=20
+// //       4x6=24
+// //       4x7=28
+// //       4x8=32
+// //       4x9=36
+// //       4x10=40"
+// const userNum = prompt("Enter a number to generate table");
 
-    for (let i = 1; i <= 10; i++) {
-      table += `${tableNum} x ${i} = ${tableNum * i} <br>`;
-    }
+// const tableGenerator = (userNum) => {
+//   if (userNum === null || userNum.trim() === "") {
+//     alert("Please enter a valid number");
+//     return;
+//   }
 
-    const q5Data = `${tableTitle} <br> ${table}`;
-    const q5Output = document.createElement("p");
-    q5Output.innerHTML = q5Data;
-    document.body.append(q5Output);
-  }
-};
-inputHandler(userNum);
+//   const tableNum = Number(userNum);
+//   if (Number.isNaN(tableNum)) {
+//     alert("Please enter a valid number \n input must be a number");
+//     return;
+//   }
 
-// ===================================
+//   const tableTitle = `Table of ${tableNum}`;
+//   let table = "";
 
-// // Q6
-// // The Temperature Converter: It’s hot out! Let’s make a converter based on the steps here.
-// // a. Store a Celsius temperature into a variable.
-// // b. Convert it to Fahrenheit & output “NNoC is NNoF”.
-// // c. Now store a Fahrenheit temperature into a variable.
-// // d. Convert it to Celsius & output “NNoF is NNoC”.
-// // Conversion Formulae: •℃ = (℉ - 32) x 5 / 9
-// //                      •℉ = (℃ x 9 / 5) + 32
-// let celsiusTemp = prompt("Convert ℃ into ℉", 0);
-// celsiusNum = parseFloat(celsiusTemp);
-// celsiusToFahrenheit = ((celsiusNum * 9) / 5 + 32);
-// // Fahrenheit temperature
-// console.log(`${celsiusNum}℃ is ${celsiusToFahrenheit}℉`);
+//   for (let i = 1; i <= 10; i++) {
+//     table += `${tableNum} x ${i} = ${tableNum * i} <br>`;
+//   }
 
-// let fahrenheitTemp = prompt("Convert ℉ into ℃", 212);
-// fahrenheitNum = parseFloat(fahrenheitTemp);
-// fahrenheitToCelsius = ((fahrenheitNum - 32) * 5) / 9;
-// // Celsius temperature
-// console.log(`${fahrenheitNum}℉ is ${fahrenheitToCelsius}℃`);
+//   const q5Data = `${tableTitle} <br> ${table}`;
+//   const q5Output = document.createElement("p");
+
+//   q5Output.innerHTML = q5Data;
+//   document.body.append(q5Output);
+// };
+// tableGenerator(userNum);
 
 // // ===================================
+
+// Q6
+// The Temperature Converter: It’s hot out! Let’s make a converter based on the steps here.
+// a. Store a Celsius temperature into a variable.
+// b. Convert it to Fahrenheit & output “NNoC is NNoF”.
+// c. Now store a Fahrenheit temperature into a variable.
+// d. Convert it to Celsius & output “NNoF is NNoC”.
+// Conversion Formulae: •℃ = (℉ - 32) x 5 / 9
+//                      •℉ = (℃ x 9 / 5) + 32
+const celsiusTemp = prompt("Convert ℃ into ℉");
+
+// Celsius to Fahrenheit Converter
+const celsiusToFahrenheitConverter = (celsiusTemp) => {
+  if (celsiusTemp === null || celsiusTemp.trim() === "") {
+    alert("Please enter a valid ℃ temperature");
+    return;
+  }
+
+  const celsiusNum = Number(celsiusTemp);
+  if (Number.isNaN(celsiusNum)) {
+    alert("Please enter valid ℃ temperature \n Temperature must be in number");
+    return;
+  }
+
+  const celsiusToFahrenheit = (celsiusNum * 9) / 5 + 32;
+
+  const q6Data = `${celsiusNum}℃ is ${celsiusToFahrenheit}℉`;
+  const q6Output = document.createElement("p");
+
+  q6Output.append(q6Data);
+  document.body.append(q6Output);
+};
+celsiusToFahrenheitConverter(celsiusTemp);
+
+const fahrenheitTemp = prompt("Convert ℉ into ℃");
+
+// Fahrenheit to Celsius Converter
+const fahrenheitToCelsiusConverter = (fahrenheitTemp) => {
+  if (fahrenheitTemp === null || fahrenheitTemp.trim() === "") {
+    alert("Please enter a valid ℉ temperature");
+    return;
+  }
+
+  const fahrenheitNum = Number(fahrenheitTemp);
+  if (Number.isNaN(fahrenheitNum)) {
+    alert("Please enter valid ℉ temperature \n Temperature must be in number");
+    return;
+  }
+
+  const fahrenheitToCelsius = ((fahrenheitNum - 32) * 5) / 9;
+
+  const q6Data = `${fahrenheitNum}℉ is ${fahrenheitToCelsius}℃`;
+  const q6Output = document.createElement("p");
+
+  q6Output.append(q6Data);
+  document.body.append(q6Output);
+};
+fahrenheitToCelsiusConverter(fahrenheitTemp);
+
+// ===================================
 
 // // Q7
 // // Write a program to implement checkout process of a shopping cart system for an e-commerce website. Store the following in variables
