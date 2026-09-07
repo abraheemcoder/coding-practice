@@ -1,5 +1,9 @@
-// Alert
-
+// Alerts
+const chapterName = "Chapter_01 - Alerts";
+const title = document.createElement("h1");
+title.append(chapterName);
+title.style.textAlign = "center";
+document.body.append(title);
 // ===================================
 
 // Q1

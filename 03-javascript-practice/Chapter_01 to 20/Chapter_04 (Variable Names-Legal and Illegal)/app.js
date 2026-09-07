@@ -1,3 +1,12 @@
+// Variable Names legal and illegal
+const chapterName = "Chapter_04 - Variable Names legal and illegal";
+const title = document.createElement("h1");
+title.append(chapterName);
+title.style.textAlign = "center";
+document.body.append(title);
+
+// ===================================
+
 // Q1
 // Declare 3 variables in one statement.
 const myName = "Abdul Raheem", age = 20, birthPlace = "Karachi";

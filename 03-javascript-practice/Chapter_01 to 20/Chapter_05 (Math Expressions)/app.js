@@ -1,3 +1,12 @@
+// Math Expressions
+const chapterName = "Chapter_05 - Math Expressions";
+const title = document.createElement("h1");
+title.append(chapterName);
+title.style.textAlign = "center";
+document.body.append(title);
+
+// ===================================
+
 // Q1
 // Write a program that take two numbers & add them in a new variable. Show the result in your browser.
 // Addition(+):
@@ -89,102 +98,102 @@ document.body.append(q4Output);
 
 // ===================================
 
-// // Q5
-// // Write a script to display multiplication table of any number in your browser.
-// // e.g: "Table of 4
-// //       4x1=4
-// //       4x2=8
-// //       4x3=12
-// //       4x4=16
-// //       4x5=20
-// //       4x6=24
-// //       4x7=28
-// //       4x8=32
-// //       4x9=36
-// //       4x10=40"
-// const userNum = prompt("Enter a number to generate table");
-// const tableGenerator = (userNum) => {
-//   if (userNum === null || userNum.trim() === "") {
-//     alert("Please enter a valid number");
-//     return;
-//   }
-//   const tableNum = Number(userNum);
-//   if (Number.isNaN(tableNum) || !Number.isFinite(tableNum)) {
-//     alert("Please enter a valid number \n input must be a number");
-//     return;
-//   }
-//   let table = "";
-//   for (let i = 1; i <= 10; i++) {
-//     table += `${tableNum} x ${i} = <strong>${tableNum * i}</strong><br>`;
-//   }
-//   const q5Output = document.createElement("div");
-//   q5Output.innerHTML = `
-//     <h1>Table of ${tableNum}</h1>
-//     <p>${table}</p>
-//   `;
-//   document.body.append(q5Output);
-// };
-// tableGenerator(userNum);
+// Q5
+// Write a script to display multiplication table of any number in your browser.
+// e.g: "Table of 4
+//       4x1=4
+//       4x2=8
+//       4x3=12
+//       4x4=16
+//       4x5=20
+//       4x6=24
+//       4x7=28
+//       4x8=32
+//       4x9=36
+//       4x10=40"
+const userNum = prompt("Enter a number to generate table");
+const tableGenerator = (userNum) => {
+  if (userNum === null || userNum.trim() === "") {
+    alert("Please enter a valid number");
+    return;
+  }
+  const tableNum = Number(userNum);
+  if (!Number.isFinite(tableNum)) {
+    alert("Please enter a valid number \n input must be a number");
+    return;
+  }
+  let table = "";
+  for (let i = 1; i <= 10; i++) {
+    table += `${tableNum} x ${i} = <strong>${tableNum * i}</strong><br>`;
+  }
+  const q5Output = document.createElement("div");
+  q5Output.innerHTML = `
+    <h2>Table of ${tableNum}</h2>
+    <p>${table}</p>
+  `;
+  document.body.append(q5Output);
+};
+tableGenerator(userNum);
 
-// // ===================================
+// ===================================
 
-// // Q6
-// // The Temperature : It’s hot out! Let’s make a  based on the steps here.
-// // a. Store a Celsius temperature into a variable.
-// // b. Convert it to Fahrenheit & output “NNoC is NNoF”.
-// // c. Now store a Fahrenheit temperature into a variable.
-// // d. Convert it to Celsius & output “NNoF is NNoC”.
-// // Conversion Formulae: •℃ = (℉ - 32) x 5 / 9
-// //                      •℉ = (℃ x 9 / 5) + 32
-// // User Temperature Validation
-// const validateUserTemp = (temp, unit) => {
-//   if (temp === null || temp.trim() === "") {
-//     alert(`Please enter a valid ${unit} temperature`);
-//     return null;
-//   }
-//   const tempNum = Number(temp);
-//   if (Number.isNaN(tempNum) || !Number.isFinite(tempNum)) {
-//     alert(
-//       `Please enter a valid ${unit} temperature. \n Temperature must be in number.`,
-//     );
-//     return null;
-//   }
-//   return tempNum;
-// };
+// Q6
+// The Temperature : It’s hot out! Let’s make a  based on the steps here.
+// a. Store a Celsius temperature into a variable.
+// b. Convert it to Fahrenheit & output “NNoC is NNoF”.
+// c. Now store a Fahrenheit temperature into a variable.
+// d. Convert it to Celsius & output “NNoF is NNoC”.
+// Conversion Formulae: •℃ = (℉ - 32) x 5 / 9
+//                      •℉ = (℃ x 9 / 5) + 32
+// User Temperature Validation
+const validateUserTemp = (temp, unit) => {
+  if (temp === null || temp.trim() === "") {
+    alert(`Please enter a valid ${unit} temperature`);
+    return null;
+  }
+  const tempNum = Number(temp);
+  if (!Number.isFinite(tempNum)) {
+    alert(
+      `Please enter a valid ${unit} temperature. \n Temperature must be in number.`,
+    );
+    return null;
+  }
+  return tempNum;
+};
 
-// const celsiusTemp = prompt("Convert Celsius into Fahrenheit temperature",);
-// // Celsius to Fahrenheit
-// const celsiusToFahrenheit = (celsiusTemp) => {
-//   const celsius = validateUserTemp(celsiusTemp, "Celsius");
-//   if (celsius === null) {
-//     return;
-//   }
-//   const fahrenheit = (celsius * 9) / 5 + 32;
-//   const q6Output = document.createElement("p");
-//   q6Output.innerHTML = `
-//     ${celsius}℃ is <strong>${fahrenheit}</strong>℉
-//   `;
-//   document.body.append(q6Output);
-// };
-// celsiusToFahrenheit(celsiusTemp);
+const celsiusTemp = prompt("Convert Celsius into Fahrenheit temperature");
+// Celsius to Fahrenheit
+const celsiusToFahrenheit = (celsiusTemp) => {
+  const celsius = validateUserTemp(celsiusTemp, "Celsius");
+  if (celsius === null) {
+    return;
+  }
+  const fahrenheit = (celsius * 9) / 5 + 32;
+  const q6Output = document.createElement("p");
+  q6Output.innerHTML = `
+    ${celsius}℃ is <strong>${fahrenheit}</strong>℉
+  `;
+  document.body.append(q6Output);
+};
+celsiusToFahrenheit(celsiusTemp);
 
-// const fahrenheitTemp = prompt("Convert Fahrenheit into Celsius temperature");
-// // Fahrenheit to Celsius
-// const fahrenheitToCelsius = (fahrenheitTemp) => {
-//   const fahrenheit = validateUserTemp(fahrenheitTemp, "Fahrenheit");
-//   if (fahrenheit === null) {
-//     return;
-//   }
-//   const celsius = ((fahrenheit - 32) * 5) / 9;
-//   const q6Output = document.createElement("p");
-//   q6Output.innerHTML = `
-//     ${fahrenheit}℉ is <strong>${celsius}</strong>℃
-//   `;
-//   document.body.append(q6Output);
-// };
-// fahrenheitToCelsius(fahrenheitTemp);
+const fahrenheitTemp = prompt("Convert Fahrenheit into Celsius temperature");
+// Fahrenheit to Celsius
+const fahrenheitToCelsius = (fahrenheitTemp) => {
+  const fahrenheit = validateUserTemp(fahrenheitTemp, "Fahrenheit");
+  if (fahrenheit === null) {
+    return;
+  }
+  const celsius = ((fahrenheit - 32) * 5) / 9;
+  const q6Output = document.createElement("p");
+  q6Output.innerHTML = `
+    ${fahrenheit}℉ is <strong>${celsius}</strong>℃
+  `;
+  document.body.append(q6Output);
+};
+fahrenheitToCelsius(fahrenheitTemp);
 
-// // ===================================
+// ===================================
 
 // Q7
 // Write a program to implement checkout process of a shopping cart system for an e-commerce website. Store the following in variables
@@ -212,7 +221,7 @@ const totalCost =
   shippingCharges;
 const q7Output = document.createElement("div");
 q7Output.innerHTML = `
-  <h1>Shopping Receipt</h1>
+  <h2>Shopping Receipt</h2>
   <p>Price of item 1 is <strong>${firstItemPrice}</strong><br>
      Quantity of item 1 is <strong>${firstItemQuantity}</strong><br>
      Price of item 2 is <strong>${secondItemPrice}</strong><br>
@@ -235,7 +244,7 @@ const obtainedMarks = 804;
 const percentage = (obtainedMarks / totalMarks) * 100;
 const q8Output = document.createElement("div");
 q8Output.innerHTML = `
-  <h1>Mark Sheet</h1>
+  <h2>Mark Sheet</h2>
   <p>Total marks: <strong>${totalMarks}</strong><br>
      Marks obtained: <strong>${obtainedMarks}</strong><br>
      Percentage: <strong>${percentage.toFixed(2)}</strong>%</p>
@@ -257,7 +266,7 @@ const riyalRate = 73.94;
 const totalCurrency = 10 * dollarRate + 25 * riyalRate;
 const q9Output = document.createElement("div");
 q9Output.innerHTML = `
-  <h1>Currency in Pkr</h1>
+  <h2>Currency in Pkr</h2>
   <p>Total currency in Pkr: <strong>${totalCurrency}</strong></p>
 `;
 document.body.append(q9Output);
@@ -294,7 +303,7 @@ const age1 = currentYear - birthYear;
 const age2 = age1 - 1;
 const q11Output = document.createElement("div");
 q11Output.innerHTML = `
-  <h1>Age Calculator</h1>
+  <h2>Age Calculator</h2>
   <p>Current Year is <strong>${currentYear}</strong><br>
      Birth Year is <strong>${birthYear}</strong></p>
   <p>Your Age is either <strong>${age2}</strong> or <strong>${age1}</strong> years old</p>
@@ -316,7 +325,7 @@ document.body.append(q11Output);
 const pi = 3.142;
 const circleRadius = 20;
 const circleCircumference = 2 * pi * circleRadius;
-const circleArea = pi * (circleRadius ** 2);
+const circleArea = pi * circleRadius ** 2;
 const q12Output = document.createElement("p");
 q12Output.innerHTML = `
   Radius of a circle is <strong>${circleRadius}</strong><br>
@@ -340,14 +349,14 @@ document.body.append(q12Output);
 //         Estimated maximum age is 100
 //         Amount of snacks per day is 2
 //         You will need 58400 chocolatto to last you until the ripe old age of 100
-const favoriteSnack = "chocolatto";
+const favoriteSnack = "Chocolatto";
 const currentAge = 20;
 const maximumAge = 100;
 const snackPerDay = 2;
 const snackNeeded = (maximumAge - currentAge) * 365 * snackPerDay;
 const q13Output = document.createElement("div");
 q13Output.innerHTML = `
-  <h1>The lifetime Supply Calculator</h1>
+  <h2>The lifetime Supply Calculator</h2>
   <p>Favourite snack is <strong>${favoriteSnack}</strong><br>
     Current age is <strong>${currentAge}</strong><br>
     Estimated maximum age is <strong>${maximumAge}</strong><br>
