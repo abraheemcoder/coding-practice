@@ -1,5 +1,6 @@
 // Math Expressions
-const chapterName = "Chapter_01 to 09 - Math Expressions";
+
+const chapterName = "Chapter_01 to 08 - Math Expressions";
 const title = document.createElement("h1");
 title.append(chapterName);
 title.style.textAlign = "center";

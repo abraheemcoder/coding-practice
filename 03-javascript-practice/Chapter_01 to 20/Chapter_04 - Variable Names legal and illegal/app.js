@@ -1,4 +1,5 @@
 // Variable Names legal and illegal
+
 const chapterName = "Chapter_04 - Variable Names legal and illegal";
 const title = document.createElement("h1");
 title.append(chapterName);

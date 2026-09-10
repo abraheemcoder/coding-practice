@@ -1,4 +1,5 @@
 // Variables for strings
+
 const chapterName = "Chapter_02 - Variables for strings";
 const title = document.createElement("h1");
 title.append(chapterName);

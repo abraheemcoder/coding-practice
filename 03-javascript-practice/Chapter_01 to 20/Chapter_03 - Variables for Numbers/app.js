@@ -1,9 +1,11 @@
 // Variables for Numbers
+
 const chapterName = "Chapter_03 - Variables for Numbers";
 const title = document.createElement("h1");
 title.append(chapterName);
 title.style.textAlign = "center";
 document.body.append(title);
+
 // ===================================
 
 // Q1
