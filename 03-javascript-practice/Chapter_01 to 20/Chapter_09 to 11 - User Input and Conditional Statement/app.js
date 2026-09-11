@@ -213,173 +213,211 @@ document.body.append(title);
 
 // // ===================================
 
-// Q6
-// Write a program to take input the marks obtained in three subjects & total marks.
-// Compute & show the resulting percentage on your browser.
-// Take percentage & compute grade as per following table:
-// Table: Percentage %                   Grade     Remarks
-//        Greater than or equal to 80    A-one     Excellent
-//        Greater than or equal to 70    A         Good
-//        Greater than or equal to 60    B         You need to improve
-//        Less than 60                   Fail      Sorry
-// Show the total marks, marks obtained, percentage, grade & remarks
-// like this: Marks Sheet
-//            Total marks : 300
-//            Marks obtained : 219
-//            Percentage : 73%
-//            Grade: B
-//            Remarks : You need to improve
-// Validate Obtained Marks
-const validateObtainedMarks = (marks) => {
-  if (marks === null || marks.trim() === "") {
-    alert("Please enter valid obtained marks");
-    return null;
-  }
-  const marksNum = Number(marks);
-  if (!Number.isFinite(marksNum) || marksNum < 0 || marksNum > 100) {
-    alert(
-      "Obtained marks must be a number between 0 and 100",
-    );
-    return null;
-  }
-  return marksNum;
-};
+// // Q6
+// // Write a program to take input the marks obtained in three subjects & total marks.
+// // Compute & show the resulting percentage on your browser.
+// // Take percentage & compute grade as per following table:
+// // Table: Percentage %                   Grade     Remarks
+// //        Greater than or equal to 80    A-one     Excellent
+// //        Greater than or equal to 70    A         Good
+// //        Greater than or equal to 60    B         You need to improve
+// //        Less than 60                   Fail      Sorry
+// // Show the total marks, marks obtained, percentage, grade & remarks
+// // like this: Marks Sheet
+// //            Total marks : 300
+// //            Marks obtained : 219
+// //            Percentage : 73%
+// //            Grade: B
+// //            Remarks : You need to improve
+// // Validate Obtained Marks
+// const validateObtainedMarks = (marks) => {
+//   if (marks === null || marks.trim() === "") {
+//     alert("Please enter valid obtained marks");
+//     return null;
+//   }
+//   const marksNum = Number(marks);
+//   if (!Number.isFinite(marksNum) || marksNum < 0 || marksNum > 100) {
+//     alert(
+//       "Obtained marks must be a number between 0 and 100",
+//     );
+//     return null;
+//   }
+//   return marksNum;
+// };
 
-// Validate Total Marks
-const validateTotalMarks = (marks) => {
-  if (marks === null || marks.trim() === "") {
-    alert("Please enter your valid obtained marks");
-    return null;
-  }
-  const marksNum = Number(marks);
-  if (!Number.isFinite(marksNum) || marksNum <= 0) {
-    alert(
-      "Total marks must be a number greater than 0",
-    );
-    return null;
-  }
-  return marksNum;
-};
+// // Validate Total Marks
+// const validateTotalMarks = (marks) => {
+//   if (marks === null || marks.trim() === "") {
+//     alert("Please enter your valid obtained marks");
+//     return null;
+//   }
+//   const marksNum = Number(marks);
+//   if (!Number.isFinite(marksNum) || marksNum <= 0) {
+//     alert(
+//       "Total marks must be a number greater than 0",
+//     );
+//     return null;
+//   }
+//   return marksNum;
+// };
 
-// Collect Marks
-const collectMarks = () => {
-  const firstSubjectObtainedMarks = validateObtainedMarks(
-    prompt("Enter your first subject obtained marks"),
-  );
-  if (firstSubjectObtainedMarks === null) return;
-  const secondSubjectObtainedMarks = validateObtainedMarks(
-    prompt("Enter your second subject obtained marks"),
-  );
-  if (secondSubjectObtainedMarks === null) return;
-  const thirdSubjectObtainedMarks = validateObtainedMarks(
-    prompt("Enter your third subject obtained marks"),
-  );
-  if (thirdSubjectObtainedMarks === null) return;
-  const totalMarks = validateTotalMarks(
-    prompt("Enter total marks of three subjects"),
-  );
-  if (totalMarks === null) return;
-  generateMarksSheet(
-    firstSubjectObtainedMarks,
-    secondSubjectObtainedMarks,
-    thirdSubjectObtainedMarks,
-    totalMarks,
-  );
-};
+// // Collect Marks
+// const collectMarks = () => {
+//   const firstSubjectObtainedMarks = validateObtainedMarks(
+//     prompt("Enter your first subject obtained marks"),
+//   );
+//   if (firstSubjectObtainedMarks === null) return;
+//   const secondSubjectObtainedMarks = validateObtainedMarks(
+//     prompt("Enter your second subject obtained marks"),
+//   );
+//   if (secondSubjectObtainedMarks === null) return;
+//   const thirdSubjectObtainedMarks = validateObtainedMarks(
+//     prompt("Enter your third subject obtained marks"),
+//   );
+//   if (thirdSubjectObtainedMarks === null) return;
+//   const totalMarks = validateTotalMarks(
+//     prompt("Enter total marks of three subjects"),
+//   );
+//   if (totalMarks === null) return;
+//   generateMarksSheet(
+//     firstSubjectObtainedMarks,
+//     secondSubjectObtainedMarks,
+//     thirdSubjectObtainedMarks,
+//     totalMarks,
+//   );
+// };
 
-// Generate Marks Sheet
-function generateMarksSheet(marks1, marks2, marks3, totalMarks) {
-  const totalObtainedMarks = marks1 + marks2 + marks3;
-  const percentage = (totalObtainedMarks / totalMarks) * 100;
+// // Generate Marks Sheet
+// function generateMarksSheet(marks1, marks2, marks3, totalMarks) {
+//   const totalObtainedMarks = marks1 + marks2 + marks3;
+//   const percentage = (totalObtainedMarks / totalMarks) * 100;
 
-  let grade;
-  let remarks;
-  if (percentage >= 80) {
-    grade = "A-one";
-    remarks = "Excellent";
-  } else if (percentage >= 70) {
-    grade = "A";
-    remarks = "Good";
-  } else if (percentage >= 60) {
-    grade = "B";
-    remarks = "You need to improve";
-  } else {
-    grade = "Fail";
-    remarks = "Sorry";
-  }
+//   let grade;
+//   let remarks;
+//   if (percentage >= 80) {
+//     grade = "A-one";
+//     remarks = "Excellent";
+//   } else if (percentage >= 70) {
+//     grade = "A";
+//     remarks = "Good";
+//   } else if (percentage >= 60) {
+//     grade = "B";
+//     remarks = "You need to improve";
+//   } else {
+//     grade = "Fail";
+//     remarks = "Sorry";
+//   }
 
-  const q6Output = document.createElement("div");
-  q6Output.innerHTML = `
-    <h2>Marks Sheet</h2>
-    <p>Total marks: <strong>${totalMarks}</strong><br>
-       Marks obtained: <strong>${totalObtainedMarks}</strong><br>
-       Percentage: <strong>${percentage.toFixed(2)}%</strong><br>
-       Grade: <strong>${grade}</strong><br>
-       Remarks: <strong>${remarks}</strong></p>
-  `;
-  document.body.append(q6Output);
-}
-collectMarks();
+//   const q6Output = document.createElement("div");
+//   q6Output.innerHTML = `
+//     <h2>Marks Sheet</h2>
+//     <p>Total marks: <strong>${totalMarks}</strong><br>
+//        Marks obtained: <strong>${totalObtainedMarks}</strong><br>
+//        Percentage: <strong>${percentage.toFixed(2)}%</strong><br>
+//        Grade: <strong>${grade}</strong><br>
+//        Remarks: <strong>${remarks}</strong></p>
+//   `;
+//   document.body.append(q6Output);
+// }
+// collectMarks();
 
-// ===================================
+// // ===================================
 
 // // Q7
 // // Guess game:
 // // Store a secret number (ranging from 1 to 10) in a variable.
 // // Prompt user to guess the secret number.
-// // a. If user guess the same number, show “Bingo! Correct answer”.
-// // b. If the guessed number +1 or -1 is the secret number,show “Close enough to the correct answer”.
-// const secretNum = Math.floor(Math.random() * 10) + 1;
-// const userNum = prompt("Guess the number\nHint: between (1 to 10)");
-// if (userNum === null || userNum.trim() === "") {
-//   alert("Please enter a number");
-//   console.log("Please enter a number");
-// } else {
-//   const guessNum = Number(userNum);
-//   if (Number.isNaN(guessNum)) {
-//     alert("Please enter a valid number");
-//     console.log("Please enter a valid number");
-//   } else if (guessNum < 1 || guessNum > 10) {
-//     alert("Please enter a number between 1 and 10.");
-//     console.log("Please enter a number between 1 and 10.");
-//   } else if (secretNum === guessNum) {
+// // a. If user guess the same number, show “Bingo! Correct answer” in alert.
+// // b. If the guessed number +1 or -1 is the secret number,show “Close enough to the correct answer” in alert.
+// const validateUserNumber = (input) => {
+//   if (input === null || input.trim() === "") {
+//     alert("Please enter your guess number");
+//     return null;
+//   }
+
+//   const userNumber = Number(input);
+//   if (!Number.isFinite(userNumber) || !Number.isInteger(userNumber)) {
+//     alert("Please enter your valid guess number\nGuess number must be integer");
+//     return null;
+//   }
+
+//   if (userNumber < 1 || userNumber > 10) {
+//     alert("Guess number must be between 1 and 10");
+//     return null;
+//   }
+//   return userNumber;
+// };
+
+// const secretNumber = Math.floor(Math.random() * 10) + 1;
+// const userNumber = validateUserNumber(
+//   prompt("Guess the number\nHint: number is between 1 and 10"),
+// );
+// const difference = Math.abs(secretNumber - userNumber);
+
+// const checkGuess = (num) => {
+//   if (num === null) {
+//     return;
+//   }
+
+//   if (secretNumber === num) {
 //     alert("Bingo! Correct answer");
-//     console.log("Bingo! Correct answer");
-//   } else if (secretNum + 1 === guessNum || secretNum - 1 === guessNum) {
+//   } else if (difference === 1) {
 //     alert("Close enough to the correct answer");
-//     console.log("Close enough to the correct answer");
 //   } else {
 //     alert("Try again");
-//     console.log("Try again");
 //   }
-// }
-// console.log(`Secret Number: ${secretNum}`);
+
+//   displayGameResult(num);
+// };
+
+// const displayGameResult = (num) => {
+//   const q7Output = document.createElement("div");
+//   q7Output.innerHTML = `
+//     <h2>Guessing the Number Game</h2>
+//     <p>Your Number: <strong>${num}</strong><br>
+//        Correct Number: <strong>${secretNumber}</strong><br>
+//        Difference: <strong>${difference}</strong></p>
+//   `;
+//   document.body.append(q7Output);
+// };
+
+// checkGuess(userNumber);
 
 // // ===================================
 
-// // Q8
-// // Write a program to check whether the given number is divisible by 3.
-// // Show the message to the user if the number is divisible by 3.
-// const num = prompt("Enter a number");
-// if (num === null || num.trim() === "") {
-//   alert("Please enter a number");
-//   console.log("Please enter a number");
-// } else {
-//   const number = Number(num);
-//   const checkNum = number % 3;
-//   if (Number.isNaN(number)) {
-//     alert("Please enter a valid number");
-//     console.log("Please enter a valid number");
-//   } else if (checkNum === 0) {
-//     alert("The number is divisible by 3");
-//     console.log("The number is divisible by 3");
-//   } else {
-//     alert("The number is not divisible by 3");
-//     console.log("The number is not divisible by 3");
-//   }
-// }
+// Q8
+// Write a program to check whether the given number is divisible by 3.
+// Show the message to the user if the number is divisible by 3.
+const validateUserNum = (input) => {
+  if (input === null || input.trim() === "") {
+    alert("Please enter your number");
+    return null;
+  }
 
-// // ===================================
+  const userNum = Number(input);
+  if (!Number.isFinite(userNum)) {
+    alert("Please enter a valid number");
+    return null;
+  }
+  return userNum;
+};
+
+const userNum = validateUserNum(prompt("Enter a number to check whether it is divisible by 3"));
+
+const checkDivisibilityByThree = (num) => {
+  if (num === null) {
+    return;
+  }
+
+  if (num % 3 === 0) {
+    alert("The number is divisible by 3");
+  } else {
+    alert("The number is not divisible by 3");
+  }
+};
+checkDivisibilityByThree(userNum);
+
+// ===================================
 
 // // Q9
 // // Write a program that checks whether the given input is an even number or an odd number.
