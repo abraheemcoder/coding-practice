@@ -70,58 +70,111 @@ document.body.append(title);
 
 // ===================================
 
-// Q2
-//  Write a JavaScript program that accept two integers and display the larger. Also show if the two integers are equal.
-const validateInteger = (input) => {
+// // Q2
+// //  Write a JavaScript program that accept two integers and display the larger. Also show if the two integers are equal.
+// const validateInteger = (input) => {
+//   if (typeof input !== "string") {
+//     return null;
+//   }
+
+//   const trimmedInput = input.trim();
+//   if (trimmedInput === "") {
+//     alert("Please enter an integer");
+//     return null;
+//   }
+
+//   const integer = Number(trimmedInput);
+//   if (!Number.isInteger(integer)) {
+//     alert("Please enter a valid integer");
+//     return null;
+//   }
+//   return integer;
+// };
+
+// const compareInteger = (firstInteger, secondInteger) => {
+//   if (firstInteger === secondInteger) {
+//     return "Both integers are equal";
+//   }
+
+//   if (firstInteger > secondInteger) {
+//     return "The first integer is larger";
+//   }
+//   return "The second integer is larger";
+// };
+
+// const displayOutput = (message) => {
+//   const output = document.createElement("p");
+//   output.textContent = message;
+//   document.body.append(output);
+// };
+
+// const collectInteger = () => {
+//   const firstInteger = validateInteger(prompt("Enter a first integer"));
+//   if (firstInteger === null) return;
+
+//   const secondInteger = validateInteger(prompt("Enter a second integer"));
+//   if (secondInteger === null) return;
+
+//   const message = compareInteger(firstInteger, secondInteger);
+
+//   displayOutput(message);
+// };
+// collectInteger();
+
+// // ===================================
+
+// Q3
+// Write a program that takes input a number from user & state whether the number is positive, negative or zero.
+const validateNumber = (input) => {
   if (typeof input !== "string") {
     return null;
   }
 
   const trimmedInput = input.trim();
   if (trimmedInput === "") {
-    alert("Please enter an integer");
+    alert("Please enter a number");
     return null;
   }
 
-  const integer = Number(trimmedInput);
-  if (!Number.isInteger(integer)) {
-    alert("Please enter a valid integer");
+  const number = Number(trimmedInput);
+  if (!Number.isFinite(number)) {
+    alert("Please enter a valid number");
     return null;
   }
-  return integer;
+  return number;
 };
 
-const compareInteger = (firstInteger, secondInteger) => {
-  if (firstInteger === secondInteger) {
-    return "Both integers are equal";
+const number = validateNumber(prompt("Enter a number to check whether it is positive, negative or zero"));
+
+const checkNumberSign = (number) => {
+  if (number === null) {
+    return;
   }
 
-  if (firstInteger > secondInteger) {
-    return "The first integer is larger";
+  if (number > 0) {
+    return "Your given number is positive";
   }
-  return "The second integer is larger";
+
+  if (number < 0) {
+    return "Your given number is negative";
+  }
+
+  if (number === 0) {
+    return "Your given number is zero";
+  }
 };
 
-const displayOutput = (message) => {
-  const output = document.createElement("p");
-  output.textContent = message;
-  document.body.append(output);
+const result = checkNumberSign(number);
+
+const displayOutput = (result) => {
+  if (result !== null) {
+    const output = document.createElement("p");
+    output.textContent = result;
+    document.body.append(output);
+  }
 };
+displayOutput(result);
 
-const collectInteger = () => {
-  const firstInteger = validateInteger(prompt("Enter a first integer"));
-  if (firstInteger === null) return;
-
-  const secondInteger = validateInteger(prompt("Enter a second integer"));
-  if (secondInteger === null) return;
-
-  const message = compareInteger(firstInteger, secondInteger);
-
-  displayOutput(message);
-};
-collectInteger();
-
-// ===================================
 // ===================================
 // ===================================
 // ===================================
