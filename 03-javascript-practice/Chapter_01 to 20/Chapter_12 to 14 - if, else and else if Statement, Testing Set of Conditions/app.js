@@ -1,13 +1,13 @@
-// if, else and else if Statement, Testing Set of Conditions
+// // if, else and else if Statement, Testing Set of Conditions
 
-const chapterName =
-  "Chapter_12 to 14 - if, else and else if Statement, Testing Set of Conditions";
-const title = document.createElement("h1");
-title.append(chapterName);
-title.style.textAlign = "center";
-document.body.append(title);
+// const chapterName =
+//   "Chapter_12 to 14 - if, else and else if Statement, Testing Set of Conditions";
+// const title = document.createElement("h1");
+// title.append(chapterName);
+// title.style.textAlign = "center";
+// document.body.append(title);
 
-// ===================================
+// // ===================================
 
 // // Q1
 // // Write a program that takes a character (number or string) in a variable & checks whether the given input is a number, uppercase letter or lower case letter. (Hint: ASCII codes: A=65, Z=90, a=97, z=122, 0=48, 9=57).
@@ -18,7 +18,7 @@ document.body.append(title);
 //   }
 
 //   const char = input.trim();
-//   if (char.length === 0) {
+//   if (char.length === "") {
 //     alert("Please enter a character");
 //     return null;
 //   }
@@ -68,7 +68,7 @@ document.body.append(title);
 //   }
 // }
 
-// ===================================
+// // ===================================
 
 // // Q2
 // //  Write a JavaScript program that accept two integers and display the larger. Also show if the two integers are equal.
@@ -123,77 +123,113 @@ document.body.append(title);
 
 // // ===================================
 
-// Q3
-// Write a program that takes input a number from user & state whether the number is positive, negative or zero.
-const validateNumber = (input) => {
-  if (typeof input !== "string") {
-    return null;
-  }
+// // Q3
+// // Write a program that takes input a number from user & state whether the number is positive, negative or zero.
+// const validateNumber = (input) => {
+//   if (typeof input !== "string") {
+//     return null;
+//   }
 
-  const trimmedInput = input.trim();
-  if (trimmedInput === "") {
-    alert("Please enter a number");
-    return null;
-  }
+//   const trimmedInput = input.trim();
+//   if (trimmedInput === "") {
+//     alert("Please enter a number");
+//     return null;
+//   }
 
-  const number = Number(trimmedInput);
-  if (!Number.isFinite(number)) {
-    alert("Please enter a valid number");
-    return null;
-  }
-  return number;
-};
+//   const number = Number(trimmedInput);
+//   if (!Number.isFinite(number)) {
+//     alert("Please enter a valid number");
+//     return null;
+//   }
+//   return number;
+// };
 
-const number = validateNumber(prompt("Enter a number to check whether it is positive, negative or zero"));
+// const number = validateNumber(prompt("Enter a number to check whether it is positive, negative or zero"));
 
-const checkNumberSign = (number) => {
-  if (number === null) {
-    return;
-  }
+// const checkNumberSign = (number) => {
+//   if (number === null) {
+//     return;
+//   }
 
-  if (number > 0) {
-    return "Your given number is positive";
-  }
+//   if (number > 0) {
+//     return "Your given number is positive";
+//   }
 
-  if (number < 0) {
-    return "Your given number is negative";
-  }
+//   if (number < 0) {
+//     return "Your given number is negative";
+//   }
 
-  if (number === 0) {
-    return "Your given number is zero";
-  }
-};
+//   if (number === 0) {
+//     return "Your given number is zero";
+//   }
+// };
 
-const result = checkNumberSign(number);
+// const result = checkNumberSign(number);
 
-const displayOutput = (result) => {
-  if (result !== null) {
-    const output = document.createElement("p");
-    output.textContent = result;
-    document.body.append(output);
-  }
-};
-displayOutput(result);
+// const displayOutput = (result) => {
+//   if (result !== null) {
+//     const output = document.createElement("p");
+//     output.textContent = result;
+//     document.body.append(output);
+//   }
+// };
+// displayOutput(result);
 
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
-// ===================================
+// // ===================================
+
+// // Q4
+// // Write a program that takes a character (i.e. string of length 1) and returns true if it is a vowel, false otherwise
+// const validateCharacter = (input) => {
+//   if (typeof input !== "string") {
+//     return null;
+//   }
+
+//   const trimmedInput = input.trim();
+//   if (trimmedInput === "") {
+//     alert("Please enter a character");
+//     return null;
+//   }
+
+//   if (trimmedInput.length !== 1) {
+//     alert("Please enter a valid character");
+//     return null;
+//   }
+
+//   return trimmedInput;
+// };
+
+// const character = validateCharacter(
+//   prompt("Enter a character to check whether it is vowel or not"),
+// );
+
+// const checkVowel = (character) => {
+//   if (character === null) {
+//     return null;
+//   }
+
+//   const result = "aeiouAEIOU".includes(character);
+//   console.log(result)
+// };
+// checkVowel(character);
+
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
+// // ===================================
