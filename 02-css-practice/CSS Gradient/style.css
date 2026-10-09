@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  background-image:
+    linear-gradient(
+      to right top,
+      rgba(5, 25, 55, 0.6),
+      rgba(0, 77, 122, 0.6),
+      rgba(0, 135, 147, 0.6),
+      rgba(0, 191, 114, 0.6),
+      rgba(168, 235, 18, 0.6)
+    ),
+    url(./images/bg-image.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
