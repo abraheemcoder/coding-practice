@@ -39,6 +39,9 @@ console.log(isAdmin, typeof isAdmin);
 const bigNumber: bigint = 9007199254740993n;
 console.log(bigNumber, typeof bigNumber);
 
+// Decimal bigint
+// const bigDecimal: bigint = 9007199254740993.5n; // bigint must be an integer
+
 // Safe number range
 const minSafeNumber: number = Number.MIN_SAFE_INTEGER;
 const maxSafeNumber: number = Number.MAX_SAFE_INTEGER;
@@ -69,3 +72,4 @@ const id1 = Symbol("id");
 const id2 = Symbol("id");
 // Even though they have the same description, each Symbol() creates a unique value
 // console.log(id1 === id2); // false
+// console.log(id1 == id2); // false

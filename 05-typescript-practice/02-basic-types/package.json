@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "start": "node dist/arrays.js"
+    "start": "node dist/primitive-types.js"
   },
   "keywords": [],
   "author": "",
