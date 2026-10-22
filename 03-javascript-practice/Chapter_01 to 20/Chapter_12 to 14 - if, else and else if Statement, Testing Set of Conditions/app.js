@@ -259,9 +259,25 @@ document.body.style.color = "white";
 // Q7
 // Write a program that takes time as input from user in 24 hours clock format like: 1900(19:00) = 7pm. Implement the following case using if, else & else if statements
 // const time = prompt("Enter the time in your area in 24 hours clock format.\nlike this: for 19:00 enter 1900\nbetween 0 to 2359");
-const time = 2400;
+const validateInputTimeValue = (time) => {
+  if (time === null) return;
+  if (!time.trim()) {
+    return alert("Please enter the time in your area");
+  }
+
+  const timeInNum = Number(time);
+  return timeInNum;
+};
+
+const time = validateInputTimeValue(
+  prompt(
+    "Enter the time in your area\nIn 24 hours format without colon (:) like is 2300",
+  ),
+);
+
 let greetingMsg = null;
 const greeting = (time) => {
+  if (time === undefined) return;
   if (time >= 0 && time < 1200) {
     return (greetingMsg = "Good morning!");
   } else if (time >= 1200 && time < 1700) {
@@ -271,11 +287,18 @@ const greeting = (time) => {
   } else if (time >= 2100 && time < 2359) {
     greetingMsg = "Good night!";
   } else {
-    alert("time must be between 0 & 2359") = "Enter a";
+    alert("time must be between 0 & 2359");
     return;
   }
 };
 greeting(time);
-console.log(greetingMsg)
+
+const displayQ7Output = (output) => {
+  if (output === null) return;
+  const printOutput = document.createElement("p");
+  printOutput.textContent = output;
+  document.body.append(printOutput);
+};
+displayQ7Output(greetingMsg);
 
 // // ===================================
