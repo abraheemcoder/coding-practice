@@ -260,44 +260,49 @@ document.body.style.color = "white";
 // Write a program that takes time as input from user in 24 hours clock format like: 1900(19:00) = 7pm. Implement the following case using if, else & else if statements
 // const time = prompt("Enter the time in your area in 24 hours clock format.\nlike this: for 19:00 enter 1900\nbetween 0 to 2359");
 const validateInputTimeValue = (time) => {
-  if (time === null) return;
+  if (time === null) return null;
   if (!time.trim()) {
-    return alert("Please enter the time in your area");
+    alert("Please enter the time in your area");
+    return null;
   }
 
-  const timeInNum = Number(time);
-  return timeInNum;
+  const timeValue = Number(time);
+
+  if (!Number.isFinite(timeValue)) {
+    alert("Time must be between 0 & 2359");
+    return null;
+  }
+  return timeValue;
 };
 
 const time = validateInputTimeValue(
   prompt(
-    "Enter the time in your area\nIn 24 hours format without colon (:) like is 2300",
+    "Enter the time in your area\nIn 24 hours format without colon (:) like this 2300",
   ),
 );
 
-let greetingMsg = null;
-const greeting = (time) => {
-  if (time === undefined) return;
+const getGreeting = (time) => {
+  if (time === null) return;
   if (time >= 0 && time < 1200) {
-    return (greetingMsg = "Good morning!");
+    return "Good morning!";
   } else if (time >= 1200 && time < 1700) {
-    return (greetingMsg = "Good afternoon!");
+    return "Good afternoon!";
   } else if (time >= 1700 && time < 2100) {
-    greetingMsg = "Good evening!";
-  } else if (time >= 2100 && time < 2359) {
-    greetingMsg = "Good night!";
+    return "Good evening!";
+  } else if (time >= 2100 && time <= 2359) {
+    return "Good night!";
   } else {
-    alert("time must be between 0 & 2359");
-    return;
+    alert("Time must be between 0 & 2359");
+    return null;
   }
 };
-greeting(time);
+const greetingMsg = getGreeting(time);
 
 const displayQ7Output = (output) => {
   if (output === null) return;
-  const printOutput = document.createElement("p");
-  printOutput.textContent = output;
-  document.body.append(printOutput);
+  const greetingElement = document.createElement("p");
+  greetingElement.textContent = output;
+  document.body.append(greetingElement);
 };
 displayQ7Output(greetingMsg);
 
