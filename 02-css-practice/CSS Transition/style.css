@@ -58,5 +58,4 @@ body {
 .box-6:hover {
   translate: 50dvw 0;
   transition-timing-function: step-start;
-  transition-duration: 10s;
 }

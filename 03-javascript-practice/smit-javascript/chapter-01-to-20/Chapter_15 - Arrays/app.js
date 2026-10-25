@@ -3,8 +3,8 @@
 const chapterName = "Chapter_15 - Arrays";
 const titleElement = document.createElement("h1");
 titleElement.textContent = chapterName;
-titleElement.style.textAlign = "center";
 document.body.append(titleElement);
+titleElement.style.textAlign = "center";
 document.body.style.backgroundColor = "black";
 document.body.style.color = "white";
 
