@@ -168,3 +168,57 @@ displayOutput("Odd:", oddNumbers);
 displayOutput("Series:", series);
 
 // ===================================
+
+// Q7
+// You have an array
+// sweets = ["cake", "apple pie", "cookie", "chips", "patties"]
+// Write a program to enable “search by user input”inan array.
+// After searching, prompt the user whether the given item is found in the list or not.
+const normalizeOrderInput = (input) => {
+  if (input === null) return null;
+  if (input.trim() === "") {
+    alert("Please order something!");
+    return null;
+  }
+
+  return input.trim().toLowerCase();
+};
+
+const findOrderInMenu = (menu, order) => {
+  if (order === null) return;
+
+  for (let i = 0; i < menu.length; i++) {
+    if (menu[i] === order) {
+      return {
+        isAvailable: true,
+        index: i,
+      };
+    }
+  }
+
+  return {
+    isAvailable: false,
+    index: -1,
+  };
+};
+
+const displayOrderResult = (order, result, menu) => {
+  if (order === null || result === undefined) return;
+  if (result.isAvailable) {
+    alert(`${order} is available at index ${result.index} in our bakery.`);
+  } else {
+    alert(
+      `Sorry, ${order} is not available in our bakery.\nMenu:\n● ${menu.join("\n● ")}`,
+    );
+  }
+};
+
+const bakeryMenu = ["cake", "apple pie", "cookie", "chips", "patties"];
+const userOrder = normalizeOrderInput(
+  prompt("Welcome to our bakery! What would like to order?"),
+);
+const orderResult = findOrderInMenu(bakeryMenu, userOrder);
+
+displayOrderResult(userOrder, orderResult, bakeryMenu);
+
+// ===================================
