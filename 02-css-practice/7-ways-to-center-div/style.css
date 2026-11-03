@@ -1,0 +1,59 @@
+/* 7 Ways to center a div in CSS */
+
+/* 1. Using position & translate */
+/* body {
+  position: relative;
+}
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+} */
+
+/* 2. Using position, inset & margin */
+/* body {
+  position: relative;
+}
+div {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+} */
+
+/* 3. Using Flexbox */
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* 4. Using Flexbox & margin */
+/* body {
+  display: flex;
+}
+div {
+  margin: auto;
+} */
+
+/* 5. Using grid */
+/* body {
+  display: grid;
+  place-items: center;
+} */
+
+/* 6. Using grid */
+/* body {
+  display: grid;
+}
+div {
+  place-self: center;
+} */
+
+/* 7. Using grid & margin */
+/* body {
+  display: grid;
+}
+div {
+  margin: auto;
+} */
