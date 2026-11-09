@@ -21,9 +21,9 @@ const App = () => {
     }
   };
   return (
-    <div className="w-full min-h-screen pt-10 text-center bg-black text-white">
+    <div className="w-full min-h-screen pt-10 pb-5 text-center bg-black text-white">
       <button
-        className="w-35 h-12 mb-4 text-2xl font-bold border-2 rounded-xl cursor-pointer hover:bg-white hover:text-black disabled:opacity-50"
+        className="w-35 h-12 mb-4 text-2xl font-bold border-2 rounded-xl cursor-pointer hover:bg-white hover:text-black disabled:opacity-50 disabled:cursor-not-allowed"
         onClick={getData}
         disabled={isLoading}
       >
