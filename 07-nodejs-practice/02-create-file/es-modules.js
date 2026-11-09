@@ -10,7 +10,7 @@ try {
   console.error(error);
 }
 
-// Using writeFileSync() method
+// Using writeFileSync() Sync method
 import { writeFileSync } from "node:fs";
 
 try {
