@@ -101,3 +101,22 @@ console.log("less than 10 < 5:", 10 < 5);
 console.log("Greater than/equal 10 >= 5:", 10 >= 5, "& 5 >= 5:", 5 >= 5);
 // Less than/equal
 console.log("less than/equal 10 <= 5:", 10 <= 5, "& 5 <= 5:", 5 <= 5);
+
+// 6. typeof
+
+console.log("typeof 'Abdul Raheem':", typeof "Abdul Raheem");
+console.log("typeof 20:", typeof 20);
+console.log("typeof true:", typeof true);
+console.log("typeof undefined:", typeof undefined);
+console.log("typeof null:", typeof null, "- It's a JavaScript bug");
+console.log("typeof 53432473498749343n:", typeof 53432473498749343n);
+console.log("typeof Symbol():", typeof Symbol());
+
+// 6.2 instanceof
+console.log("[] instanceof Array:", [] instanceof Array);
+
+// 6.3 in
+const obj = {
+  key: "value",
+};
+console.log("'key' in obj:", "key" in obj);
