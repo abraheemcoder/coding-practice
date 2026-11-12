@@ -118,3 +118,20 @@ console.log(learningIsFunSentence.indexOf("fun"));
 console.log(learningIsFunSentence.indexOf("learning"));
 
 console.log("I hope you enjoyed learning today.");
+
+// ===================================
+
+// String concatenation
+
+const username = "Abdul Raheem";
+
+// 1. Tempelate literals - Modern & best way
+console.log(`My name is ${username}`);
+
+// 2. + and += operator
+let intro = "My name is ";
+console.log(intro + username);
+console.log((intro += username));
+
+// 2. concat()
+console.log("My name is ".concat(username));
