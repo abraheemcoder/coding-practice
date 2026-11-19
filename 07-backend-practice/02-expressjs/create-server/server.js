@@ -1,11 +1,11 @@
 import app from "./src/app.js";
 
-const port = 3000;
+const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
-  res.send("Server created & run successfully");
+  res.status(200).send("server created & run successfully");
 });
 
-app.listen(3000, () => {
-  console.log(`server is runing on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`server listening on port ${PORT}`);
 });
